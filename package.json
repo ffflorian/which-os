@@ -1,11 +1,15 @@
 {
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": {
-    "my-cli": "dist/cli.js"
+    "is-linux": "dist/cli.js --is-linux",
+    "is-macos": "dist/cli.js --is-macos",
+    "is-windows": "dist/cli.js --is-windows",
+    "which-os": "dist/cli.js"
   },
   "dependencies": {
+    "commander": "3.0.0"
   },
-  "description": "My latest project",
+  "description": "Get informations about your OS",
   "devDependencies": {
     "@ffflorian/prettier-config": "0.0.5",
     "@ffflorian/tslint-config": "0.5.0",
@@ -42,7 +46,7 @@
     }
   },
   "license": "MIT",
-  "lint-staged":{
+  "lint-staged": {
     "*.{json,md,yml}": [
       "prettier --write",
       "git add"
@@ -57,9 +61,9 @@
     ]
   },
   "main": "dist/index.js",
-  "name": "@ffflorian/my-new-project",
+  "name": "@ffflorian/which-os",
   "prettier": "@ffflorian/prettier-config",
-  "repository": "https://github.com/ffflorian/my-new-project.git",
+  "repository": "https://github.com/ffflorian/which-os.git",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
