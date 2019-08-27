@@ -1,6 +1,6 @@
-name: Push
+name: Pull request
 
-on: push
+on: pull_request
 
 jobs:
   build_test:
@@ -13,8 +13,10 @@ jobs:
       - run: |
           yarn
           yarn lint
-          yarn dist
           yarn test
+          yarn dist
+        env:
+          NODE_ENV: development
         if: |
           contains(github.event.commits[0].message, '[skip ci]') == false &&
           contains(github.event.commits[0].message, '[ci skip]') == false
