@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/ffflorian/which-os/compare/v1.0.1...v1.1.0) (2019-12-14)
+
+### Features
+
+- Add processor types ([2d9e11d](https://github.com/ffflorian/which-os/commit/2d9e11d))
+
 ## [1.0.1](https://github.com/ffflorian/which-os/compare/v1.0.0...v1.0.1) (2019-12-14)
 
 ### Bug Fixes
