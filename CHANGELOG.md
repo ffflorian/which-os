@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/ffflorian/which-os/compare/v1.1.0...v1.2.0) (2019-12-14)
+
+### Features
+
+- Add stringified OS informations ([715e7f5](https://github.com/ffflorian/which-os/commit/715e7f5))
+
 # [1.1.0](https://github.com/ffflorian/which-os/compare/v1.0.1...v1.1.0) (2019-12-14)
 
 ### Features
