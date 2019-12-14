@@ -22,7 +22,7 @@ if (program.isLinux) {
   result = whichOS.isLinux();
 } else if (program.isMacos) {
   result = whichOS.isMacOS();
-} else if (program.Windows) {
+} else if (program.isWindows) {
   result = whichOS.isWindows();
 }
 
