@@ -39,6 +39,8 @@
   ],
   "keywords": [
     "cli",
+    "operating system",
+    "os",
     "typescript"
   ],
   "husky": {

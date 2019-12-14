@@ -20,6 +20,7 @@ Options:
   --is-x64       Is the processor architecture x64?
   --is-ia32      Is the processor architecture ia32?
   --is-arm       Is the processor architecture ARM?
+  -i, --os-info  Output all OS informations
   -V, --verbose  Enable verbose output
   -v, --version  output the version number
   -h, --help     output usage information

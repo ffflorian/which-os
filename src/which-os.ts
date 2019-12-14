@@ -3,8 +3,46 @@ import * as process from 'process';
 
 const platform = os.platform();
 
-export function getOsInfo(): typeof os {
-  return os;
+interface OSInfo {
+  arch: string;
+  constants: {
+    errno: Record<string, number>;
+    priority: Record<string, number>;
+    signals: Record<string, number>;
+    UV_UDP_REUSEADDR: number;
+  };
+  cpus: os.CpuInfo[];
+  endianness: 'BE' | 'LE';
+  EOL: string;
+  freemem: number;
+  getPriority: number;
+  homedir: string;
+  hostname: string;
+  loadavg: number[];
+  networkInterfaces: Record<string, os.NetworkInterfaceInfo[]>;
+  platform: NodeJS.Platform;
+  release: string;
+  tmpdir: string;
+  totalmem: number;
+  type: string;
+  uptime: number;
+  userInfo: os.UserInfo<string>;
+}
+
+export function getOsInfo(): OSInfo {
+  return Object.entries(os)
+    .sort(([keyA], [keyB]) => keyA.localeCompare(keyB))
+    .reduce((map: any, [key, value]) => {
+      if (typeof value === 'function') {
+        if (key.startsWith('set')) {
+          return map;
+        }
+        map[key] = (value as any)();
+      } else {
+        map[key] = JSON.parse(JSON.stringify(value));
+      }
+      return map;
+    }, {});
 }
 
 export const isDarwin = (): boolean => platform === 'darwin';

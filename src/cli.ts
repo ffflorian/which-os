@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import * as program from 'commander';
+import {inspect} from 'util';
 import * as whichOS from './which-os';
 
 const {description, name, version} = require('../package.json');
@@ -52,10 +53,16 @@ for (const option of options) {
 
 program
   .name(name.replace(/^@[^/]+\//, ''))
+  .option('-i, --os-info', 'Output all OS informations')
   .option('-V, --verbose', 'Enable verbose output')
   .description(description)
   .version(version, '-v, --version')
   .parse(process.argv);
+
+if (program.osInfo) {
+  console.log(inspect(whichOS.getOsInfo(), true, Infinity, true));
+  process.exit();
+}
 
 let archResult = null;
 let osResult = null;
