@@ -1,7 +1,1 @@
-/*
- * This is your index file.
- *
- * Example:
- *
- * export * from './project';
- */
+export * from './which-os';
