@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/ffflorian/which-os/compare/v1.2.0...v1.2.1) (2019-12-17)
+
+### Bug Fixes
+
+- Export and package.json path ([ef3e463](https://github.com/ffflorian/which-os/commit/ef3e463))
+
 # [1.2.0](https://github.com/ffflorian/which-os/compare/v1.1.0...v1.2.0) (2019-12-14)
 
 ### Features
