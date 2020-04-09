@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/ffflorian/which-os/compare/v1.3.1...v1.3.2) (2020-04-09)
+
+
+### Bug Fixes
+
+* Remove other bin commands ([73091cf](https://github.com/ffflorian/which-os/commit/73091cf))
+
 ## [1.3.1](https://github.com/ffflorian/which-os/compare/v1.3.0...v1.3.1) (2020-04-09)
 
 
