@@ -62,7 +62,7 @@
     ]
   },
   "main": "dist/index.js",
-  "name": "@ffflorian/which-os",
+  "name": "which-os",
   "prettier": "@ffflorian/prettier-config",
   "repository": "https://github.com/ffflorian/which-os.git",
   "release": {
