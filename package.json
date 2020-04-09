@@ -1,9 +1,6 @@
 {
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": {
-    "is-linux": "dist/cli.js --is-linux",
-    "is-macos": "dist/cli.js --is-macos",
-    "is-windows": "dist/cli.js --is-windows",
     "which-os": "dist/cli.js"
   },
   "dependencies": {
