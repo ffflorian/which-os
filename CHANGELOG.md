@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ffflorian/which-os/compare/v1.2.1...v1.3.0) (2020-04-09)
+
+
+### Features
+
+* Rename to which-os ([b5912da](https://github.com/ffflorian/which-os/commit/b5912da))
+
 ## [1.2.1](https://github.com/ffflorian/which-os/compare/v1.2.0...v1.2.1) (2019-12-17)
 
 ### Bug Fixes
