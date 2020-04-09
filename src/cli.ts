@@ -12,8 +12,7 @@ const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
   ? defaultPackageJsonPath
   : path.join(__dirname, '../package.json');
 
-const packageJson = fs.readFileSync(packageJsonPath, 'utf-8');
-const {description, name, version}: {description: string; name: string; version: string} = JSON.parse(packageJson);
+const {description, name, version}: {description: string; name: string; version: string} = require(packageJsonPath);
 
 const capitalize = (name: string): string => `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 
