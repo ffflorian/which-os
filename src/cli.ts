@@ -68,7 +68,7 @@ program
   .parse(process.argv);
 
 if (program.osInfo) {
-  console.log(inspect(whichOS.getOsInfo(), true, Infinity, true));
+  console.info(inspect(whichOS.getOsInfo(), true, Infinity, true));
   process.exit();
 }
 
@@ -80,7 +80,7 @@ for (const option of options) {
   if (typeof program[command] !== 'undefined') {
     const result = option.fn();
     if (!!program.verbose) {
-      console.log(option.description, result);
+      console.info(option.description, result);
     }
     if (option.category === 'archType') {
       archResult = result;
