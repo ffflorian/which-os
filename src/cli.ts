@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import * as program from 'commander';
+import * as commander from 'commander';
 import * as fs from 'fs';
 import * as path from 'path';
 import {inspect} from 'util';
@@ -56,10 +56,10 @@ const options = [
 ];
 
 for (const option of options) {
-  program.option(`--is-${option.short}`, option.description);
+  commander.option(`--is-${option.short}`, option.description);
 }
 
-program
+commander
   .name(name.replace(/^@[^/]+\//, ''))
   .option('-i, --os-info', 'Output all OS informations')
   .option('-V, --verbose', 'Enable verbose output')
@@ -67,7 +67,7 @@ program
   .version(version, '-v, --version')
   .parse(process.argv);
 
-if (program.osInfo) {
+if (commander.osInfo) {
   console.info(inspect(whichOS.getOsInfo(), true, Infinity, true));
   process.exit();
 }
@@ -77,9 +77,9 @@ let osResult = null;
 
 for (const option of options) {
   const command = `is${capitalize(option.short)}`;
-  if (typeof program[command] !== 'undefined') {
+  if (typeof commander[command] !== 'undefined') {
     const result = option.fn();
-    if (!!program.verbose) {
+    if (!!commander.verbose) {
       console.info(option.description, result);
     }
     if (option.category === 'archType') {
@@ -91,7 +91,7 @@ for (const option of options) {
 }
 
 if (osResult === null && archResult === null) {
-  program.help();
+  commander.help();
 }
 
 if (osResult === false || archResult === false) {
