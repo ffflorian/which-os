@@ -4,7 +4,7 @@
     "which-os": "dist/cli.js"
   },
   "dependencies": {
-    "commander": "5.1.0"
+    "commander": "6.0.0"
   },
   "description": "Get informations about your OS",
   "devDependencies": {
