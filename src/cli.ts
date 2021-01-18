@@ -67,7 +67,9 @@ commander
   .version(version, '-v, --version')
   .parse(process.argv);
 
-if (commander.osInfo) {
+const commanderOptions = commander.opts();
+
+if (commanderOptions.osInfo) {
   console.info(inspect(whichOS.getOsInfo(), true, Infinity, true));
   process.exit();
 }
@@ -77,9 +79,9 @@ let osResult = null;
 
 for (const option of options) {
   const command = `is${capitalize(option.short)}`;
-  if (typeof commander[command] !== 'undefined') {
+  if (typeof commanderOptions[command] !== 'undefined') {
     const result = option.fn();
-    if (!!commander.verbose) {
+    if (!!commanderOptions.verbose) {
       console.info(option.description, result);
     }
     if (option.category === 'archType') {
