@@ -3,6 +3,9 @@
   "overrides": [
     {
       "files": "*.ts",
+      "globals": {
+        "NodeJS": "readonly"
+      },
       "rules": {
         "@typescript-eslint/typedef": "off"
       }
