@@ -54,8 +54,7 @@
   "license": "GPL-3.0",
   "lint-staged": {
     "*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "spec/**/*.ts": [
       "eslint --config .eslintrc.spec.json --fix"
