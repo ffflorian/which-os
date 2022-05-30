@@ -4,7 +4,7 @@
     "which-os": "dist/cli.js"
   },
   "dependencies": {
-    "commander": "9.2.0"
+    "commander": "9.3.0"
   },
   "description": "Get informations about your OS",
   "devDependencies": {
